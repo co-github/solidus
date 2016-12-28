@@ -1,5 +1,5 @@
 Spree::Core::Engine.routes.draw do
-  namespace :solidus_admin, as: :admin, module: :admin do
+  namespace :admin do
     get '/search/users', to: "search#users", as: :search_users
     get '/search/products', to: "search#products", as: :search_products
 
@@ -210,5 +210,5 @@ Spree::Core::Engine.routes.draw do
     resources :style_guide, only: [:index]
   end
 
-  get '/solidus_admin', to: 'admin/root#index', as: :admin
+  get '/admin', to: 'admin/root#index', as: :admin
 end
